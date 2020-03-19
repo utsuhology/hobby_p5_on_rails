@@ -1,0 +1,8 @@
+<h1>StaticPages#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+<% p user_signed_in? %>
+<% if user_signed_in? %>
+  <%= link_to 'log out', destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'log in', new_user_session_path %>
+<% end %>
