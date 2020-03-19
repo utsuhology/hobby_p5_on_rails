@@ -1,4 +1,6 @@
 <script>
+  let email = '<%= current_user.email %>';
+  
   function setup(){
     let canvas = createCanvas(500, 500);
     canvas.parent('sketch');
@@ -6,6 +8,9 @@
   
   function draw(){
     background(0);
+    fill(255);
+    textAlign(CENTER);
+    text(email , width*0.5, height*0.5);
     ellipse(mouseX, mouseY, 50, 50);
   }
 </script>
